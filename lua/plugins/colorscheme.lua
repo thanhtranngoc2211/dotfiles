@@ -1,21 +1,10 @@
 return {
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "solarized-osaka",
-    },
-  },
-  {
-    "folke/tokyonight.nvim",
-    enabled = false,
-  },
-  "craftzdog/solarized-osaka.nvim",
-  branch = "osaka",
-  lazy = true,
+  "sainnhe/sonokai",
+  lazy = false,
   priority = 1000,
-  opts = function()
-    return {
-      transparent = true,
-    }
+  config = function()
+    vim.g.sonokai_transparent_background = 1
+    vim.g.sonokai_style = "espresso"
+    vim.cmd.colorscheme("sonokai")
   end,
 }

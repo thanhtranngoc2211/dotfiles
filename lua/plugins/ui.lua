@@ -1,4 +1,17 @@
 return {
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   opts = {
+  --     filesystem = {
+  --       filtered_items = {
+  --         visible = true,
+  --         hide_dotfiles = true,
+  --         hide_gitignored = true,
+  --         always_show_by_pattern = { ".env*" },
+  --       },
+  --     },
+  --   },
+  -- },
   {
     "folke/noice.nvim",
     opts = function(_, opts)
@@ -35,7 +48,7 @@ return {
     end,
   },
   {
-    "echasnovski/mini.animate",
+    "nvim-mini/mini.animate",
     event = "VeryLazy",
     opts = function(_, opts)
       opts.scroll = {
@@ -54,12 +67,9 @@ return {
            ██║   ██╔══██║██╔══██║██║╚██╗██║██╔══██║   ██║   ██║╚██╗██║
            ██║   ██║  ██║██║  ██║██║ ╚████║██║  ██║   ██║   ██║ ╚████║
            ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═══╝
-                                                                      
-
       ]]
-
       logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
+      opts.header = vim.split(logo, "\n")
     end,
   },
 }
